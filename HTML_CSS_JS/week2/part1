@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+    <title>Guess game</title>
+</header>
+<body onload="do_game()">
+    <script type="text/javascript" charset="utf-8">
+        var colors = ["aqua", "blue", "brown", "cyan", "gray",
+            "green", "idnigo", "navy", "khaki", "olive", "plum",
+            "wheat", "tomato", "yellow"];
+        function do_game() {
+            colors.sort();
+            choice = Math.floor(Math.random() * colors.length);
+            alert(colors[choice]);
+            do {
+                guess = prompt("I am thinking of one of these colors\n\n" + colors.join(", ") + "\n\nWhat color am I thinking of?")
+            } while (guess != colors[choice]);
+        }
+    </script>
+</body>
+</html>
